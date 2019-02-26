@@ -12,7 +12,7 @@ function OpenButton({ listenAction, title }){
 
   return (
     <div>
-      <button onClick={() => listenAction(await openDialogue(title))}>Open</button>
+      <button onClick={async () => listenAction(await openDialogue(title))}>Open</button>
     </div>
   )
 }

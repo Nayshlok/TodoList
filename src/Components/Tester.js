@@ -1,5 +1,6 @@
 import React from 'react';
-import Testing from './OpenButton';
+import OpenButton from './OpenButton';
+import Checklist from './CheckList';
 
 const checkListData = [
   {
@@ -32,7 +33,8 @@ function doSomething(item){
 export default function Tester(){
   return (
     <div>
-      <Testing listenAction={doSomething} title="Choose a Checklist"/>
+      <Checklist items={checkListData} selectedIds={selectedIds} checkAction={doSomething}/>
+      <OpenButton listenAction={doSomething} title="Choose a Checklist"/>
     </div>
   )
 }
